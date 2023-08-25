@@ -1,5 +1,6 @@
 class Player
-  attr_reader :name, :lives, :score
+  attr_reader :name, :lives
+  attr_accessor :score  
 
   def initialize(name)
     @name = name
@@ -13,10 +14,10 @@ class Player
       puts "Player #{name}: Yes! You are correct."
     else
       @lives -= 1
-      puts "Player #{name}: Seriously? No!"
+      puts "Player #{name}: That's Incorrect"
     end
   end
-  end
+  
 
   def lose_life
     @lives -= 1

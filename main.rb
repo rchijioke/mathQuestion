@@ -17,13 +17,13 @@ puts "DEBUG: Player 2 name: #{player2_name}"
 game = Game.new([player1_name, player2_name])
 
 # Debugging: Display game initialization
-puts "DEBUG: Game initialized with players: #{game.players.map(&:name)}"
+puts "DEBUG: Game initialized with players: #{@players}"
 
 # Start the game
 game.start
 
 # Debugging: Display game outcome
-puts "DEBUG: Game outcome - #{game.players.map(&:name)} scores: #{game.players.map(&:score)}"
+puts "DEBUG: Game outcome - #{@players}"
 
 # Announce the winner
 game.announce_winner

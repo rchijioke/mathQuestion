@@ -12,12 +12,14 @@ class MathQuestion
   def ask_question(player)
     puts "#{player.name}: #{@question}"
   end
-  
-  def check_answer(player, player_answer)
-    if player_answer == @correct_answer
-      puts "#{player.name}: Correct answer!"
+
+    def check_answer(player, answer)
+    if answer == @correct_answer
+      player.score += 1
+      puts "#{player.name}: Yes! You are correct."
     else
-      puts "#{player.name}: Incorrect answer!"
+      player.lose_life
+      puts "#{player.name}: That's Incorrect!"
     end
   end
 end
